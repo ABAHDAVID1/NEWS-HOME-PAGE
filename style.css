@@ -1,0 +1,401 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+@font-face{
+src: url('Inter-Regular.ttf');
+font-family: InterRegular;
+}
+
+@font-face{
+src: url('Inter-Bold.ttf');
+font-family: InterBold;
+}
+
+body{
+padding: 40px;
+}
+
+header{
+display: flex;
+margin-bottom: 30px;
+align-items: center;
+justify-content: space-between;
+}
+
+ul{
+list-style: none;
+display: flex;
+align-items: center;
+gap: 30px;
+justify-content: center;
+}
+
+li{
+font-size: 12px;
+font-family: InterRegular;
+color: gray;
+cursor: pointer;
+transition: color 2s ease-out;
+}
+
+li:hover{
+color: hsl(5, 85%, 63%);
+}
+
+.main-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.image-box{
+background-image: url('desktop-image.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
+height: 400px;
+}
+
+.text-content{
+margin-top: 20px;
+display: flex;
+justify-content: center;
+gap: 130px;
+}
+
+.text1 h1{
+color: hsl(240, 100%, 5%);
+font-size: 50px;
+font-weight: bolder;
+font-family: InterBold;
+}
+
+.text2 p{
+font-family: InterRegular;
+color: gray;
+font-size: 15px;
+line-height: 1.6;
+margin-bottom: 30px;
+}
+
+.text2 button{
+width: 130px;
+padding: 10px;
+background-color: hsl(5, 85%, 63%);
+border: none;
+color: hsl(240, 100%, 5%);
+font-size: 12px;
+font-weight: bolder;
+transition: background-color 2s ease-out;
+cursor: pointer;
+}
+
+.text2 button:hover{
+color: white;
+background-color: hsl(240, 100%, 5%);
+}
+
+.box2{
+width: 450px;
+height: 620px;
+padding: 30px;
+background-color: hsl(240, 100%, 5%);
+}
+
+.box2 h2{
+color: hsl(35, 77%, 62%);
+font-weight: bolder;
+font-family: InterBold;
+}
+
+.box2 h3{
+font-size: 16px;
+color: hsl(35, 77%, 62%);
+cursor: pointer;
+font-weight: bolder;
+font-family: InterBold;
+transition: color 2s ease-out;
+}
+
+.box2 p{
+font-size: 10px;
+color: white;
+font-family: InterRegular;
+}
+
+.box2 h3:hover{
+color: hsl(35, 77%, 62%);
+cursor: pointer;
+font-weight: bolder;
+font-family: InterBold;
+transition: color 2s ease-out;
+}
+
+.content{
+padding-bottom: 20px;
+margin-bottom: 60px;
+border-bottom: 2px solid white;
+}
+
+.content h3{
+color: white;
+font-weight: bolder;
+}
+
+.content p{
+font-size: 15px;
+color: gray;
+line-height: 1.6;
+}
+
+.mini-container{
+margin-top: 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 40px;
+}
+
+.box{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+}
+
+.box h1{
+font-family: InterBold;
+color: hsl(5, 85%, 63%);
+font-weight: bolder;
+}
+
+.box h4{
+font-family: InterBold;
+margin-top: 25px;
+margin-bottom: 15px;
+font-weight: bolder;
+cursor: pointer;
+transition: color 2s ease-out;
+}
+
+.box h4:hover{
+font-family: InterBold;
+color: hsl(5, 85%, 63%);
+font-weight: bolder;
+}
+
+.box p{
+color: gray; 
+font-family: InterRegular; 
+font-size: 14px;
+line-height: 1.6;
+}
+
+.image-retro{
+background-image: url('image-retro.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 100px;
+height: 150px;
+}
+
+.image-top{
+background-image: url('image-top.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 100px;
+height: 150px;
+}
+
+.image-gaming{
+background-image: url('image-gaming.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 100px;
+height: 150px;
+}
+
+.hammburger{
+cursor: pointer;
+display: none;
+}
+
+.close{
+display: none;
+right: 0;
+position: absolute;
+cursor: pointer;
+}
+
+@media screen and (max-width: 377px){
+body{
+padding: 5px;
+}
+
+header{
+align-items: flex-start;
+position: relative;
+justify-content: space-between;
+}
+
+.hammburger{
+display: block;
+}
+
+ul{
+cursor: pointer;
+font-family: InterRegular;
+list-style: none;
+flex-direction: column;
+align-items: flex-start;
+color: gray;
+}
+
+nav{
+position: absolute;
+width: 200px;
+height: 550px;
+background-color: white;
+display: none;
+margin-left: -195px;
+padding: 20px;
+box-shadow: 2px 2px 20px black;
+animation: slideLeft 1.5s ease-out 1;
+}
+
+@keyframes slideLeft{
+from{
+transform: translate(100px);
+}
+}
+
+.main-container{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.text-content{
+margin-top: -220px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.text1 h1{
+color: hsl(240, 100%, 5%);
+font-size: 60px;
+font-weight: bolder;
+}
+
+.text2 p{
+color: gray;
+font-size: 15px;
+line-height: 1.4;
+margin-top: -120px;
+margin-bottom: 20px;
+}
+
+.text2 button{
+width: 160px;
+padding: 15px;
+background-color: hsl(5, 85%, 63%);
+border: none;
+font-size: 12px;
+font-weight: bolder;
+}
+
+.image-box{
+background-image: url('mobile-image.jpg');
+background-repeat: no-repeat;
+background-size: contain;
+width: 365px;
+height: 550px;
+}
+
+.box2{
+margin-top: 30px;
+width: 365px;
+height: 370px;
+padding: 15px;
+background-color: hsl(240, 100%, 5%);
+}
+.content{
+padding-bottom: 10px;
+margin-bottom: 20px;
+border-bottom: 1px solid white;
+}
+
+.content h3{
+color: white;
+font-size: 18px;
+font-weight: bolder;
+}
+
+.content p{
+margin-top: -5px;
+font-size: 15px;
+color: gray;
+line-height: 1.3;
+}
+
+.mini-container{
+width: 365px;
+margin-top: 20px;
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+gap: 10px;
+}
+
+.box{
+width: 365px;
+justify-content: flex-start;
+display: flex;
+padding: 5px;
+align-items: flex-start;
+gap: 10px;
+}
+
+.image-retro{
+background-image: url('image-retro.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 80px;
+height: 100px;
+}
+
+.image-top{
+background-image: url('image-top.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 80px;
+height: 100px;
+}
+
+.image-gaming{
+background-image: url('image-gaming.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+width: 80px;
+height: 100px;
+}
+
+.box h4{
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 15px;
+font-weight: bolder;
+}
+
+.box p{
+color: gray;
+font-size: 10px;
+line-height: 1.2;
+}
+
+}
